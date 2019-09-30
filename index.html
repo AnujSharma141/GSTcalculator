@@ -1,0 +1,129 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:800,300;&display=swap"
+  rel="stylesheet"
+/>
+<div id="back">
+  <div class="title">
+    <div class="subt">GST</div>
+    CALCULATOR
+  </div>
+  <input class="inp" onchange="val()" type="number" />
+  <div class="but-case">
+    <div class="button" onclick="fiv()">5%</div>
+    <div class="button" onclick="two()">12%</div>
+    <div class="button" onclick="eig()">18%</div>
+    <div class="button" onclick="twe()">28%</div>
+  </div>
+  <div class="result">0.00</div>
+</div>
+
+<script>
+  function val() {
+    p = document.querySelector(".inp").value;
+  }
+  result = document.querySelector(".result");
+  function fiv() {
+    m = 0.05;
+    c = p * m;
+    t = p * 1.0 + c;
+    result.innerHTML = t;
+  }
+  function two() {
+    m = 0.12;
+    c = p * m;
+    t = p * 1.0 + c;
+    result.innerHTML = t;
+  }
+  function eig() {
+    m = 0.18;
+    c = p * m;
+    t = p * 1.0 + c;
+    result.innerHTML = t;
+  }
+  function twe() {
+    m = 0.28;
+    c = p * m;
+    t = p * 1.0 + c;
+    result.innerHTML = t;
+  }
+</script>
+
+<style>
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+  #back {
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 129, 214);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    font-size: 5vw;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-weight: 800;
+  }
+  .subt {
+    font-weight: 300;
+  }
+  .inp {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 3vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    width: 20vw;
+    font-size: 2.5vw;
+    padding: 0.35vw 2vw;
+    margin-top: 4vw;
+    text-align: center;
+  }
+  .but-case {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+  }
+  .button {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    padding: 0.75vw;
+    border-radius: 2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    font-size: 1.25vw;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .button:hover {
+    background: rgb(0, 65, 204);
+    color: #fff;
+  }
+  .result {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    height: 12vw;
+    width: 18vw;
+    color: #fff;
+    font-size: 6.5vw;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
