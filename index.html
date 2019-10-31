@@ -1,3 +1,4 @@
+
 <link
   href="https://fonts.googleapis.com/css?family=Montserrat:800,300;&display=swap"
   rel="stylesheet"
@@ -11,7 +12,7 @@
     <div class="subt">GST</div>
     CALCULATOR
   </div>
-  <input class="inp" onchange="val()" type="number" />
+  <input class="inp" onchange="val()" placeholder="enter amount" type="number" autofocus />
   <div class="but-case">
     <div class="button" onclick="fiv()">5%</div>
     <div class="button" onclick="two()">12%</div>
@@ -19,6 +20,7 @@
     <div class="button" onclick="twe()">28%</div>
   </div>
   <div class="result">0.00</div>
+  <div class="name">built by<a class="iop" href="https://github.com/AnujSharma141/">Anuj Sharma</a></div>
 </div>
 
 <script>
@@ -84,11 +86,18 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     color: #fff;
-    width: 20vw;
-    font-size: 2.5vw;
-    padding: 0.35vw 2vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    padding: 0.75vw 4vw;
     margin-top: 4vw;
     text-align: center;
+  }
+  .inp:focus{
+      outline: none;
+  }
+  .inp::placeholder
+  {
+      color:#fff;
   }
   .but-case {
     display: flex;
@@ -129,5 +138,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .name
+  {
+      
+    font-family: "Montserrat", sans-serif;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iop
+  {
+      font-weight:800;
+      margin-left: 0.5vw;
+      font-size:2vw;
+      color:#fff;
+      text-decoration: none;
+  }
+  .iop:hover{
+      color:black;
   }
 </style>
